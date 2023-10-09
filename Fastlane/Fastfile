@@ -53,11 +53,11 @@ api_key = "1:434001329295:ios:4c5cdf1d6cc6e3566684fa"
 # channel = "teams"
 # webhook_url = "https://fastlanesample.webhook.office.com/webhookb2/a7a0ghu182w77378363/63g7732/"
 # # Output build path
-# output_directory_path = ENV["PWD"] + "/build/"
+output_directory_path = ENV["PWD"] + "/build/"
 # # Project directory
-# project_directory = ENV["PWD"] + "/reports/"
+project_directory = ENV["PWD"] + "/reports/"
 # # Output build name
-# output_build_name = ""
+output_build_name = ""
 
 desc "Get certificates"
 lane :certificates do
@@ -146,12 +146,8 @@ desc "This lane initiates the build process. Takes argument(options) as app_buil
               configuration: build_config,  
               include_bitcode: false,
               export_options: ({
-                compileBitcode: compile_bitcode,
-                provisioningProfiles: {
-                  bundle_identifier => provisioning_profile
-                }
+                compileBitcode: compile_bitcode
               }),
-              codesigning_identity: codesign_certificate,
               output_directory: output_directory_path,
               output_name: options[:app_build_name],
            }
