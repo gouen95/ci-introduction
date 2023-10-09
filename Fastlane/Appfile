@@ -1,8 +1,10 @@
 # Apple Configuration
-app_identifier("com.pixlr.AnyApp") # The bundle identifier of your app
+app_identifier("com.pixlr.brandontest") # The bundle identifier of your app
 apple_id("brandon.wong@123rf.com") # Your Apple email address
 ENV["FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD"] = "test-fast-lane-sample"
+itc_team_name("Pixlr Pte Ltd")
 itc_team_id("126510889") # iTunes Connect Team ID
+team_name("Pixlr Pte Ltd")
 team_id("55H6492P44") # Developer Portal Team ID
 # Override timeout to increase to custom value
 ENV["FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT"] = "180"
